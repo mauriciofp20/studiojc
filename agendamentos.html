@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Studio Jullya Castro</title>
+</head>
+<body>
+    <h1>Studio Jullya Castro</h1>
+    <hr>
+
+    <div id="container">
+
+    <div id="formulario"></div>
+
+    <label for="cliente">Cliente:</label>
+    <input type="text" id="cliente">
+    <br><br>
+
+    <label for="data">Data:</label>
+    <input type="date" id="data">
+    <br><br>
+
+    <label for="horario">Horário:</label>
+    <select id="horario">
+        <option value="">Selecione</option>
+        <option value="07:00">07:00</option>
+        <option value="07:30">07:30</option>
+        <option value="08:00">08:00</option>
+        <option value="08:30">08:30</option>
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        <option value="12:30">12:30</option>
+        <option value="13:00">13:00</option>
+        <option value="13:30">13:30</option>
+        <option value="14:00">14:00</option>
+        <option value="14:30">14:30</option>
+        <option value="15:00">15:00</option>
+        <option value="15:30">15:30</option>
+        <option value="16:00">16:00</option>
+        <option value="16:30">16:30</option>
+        <option value="17:00">17:00</option>
+        <option value="17:30">17:30</option>
+        <option value="18:00">18:00</option>
+
+
+    </select>
+    <br><br>
+
+    <label for="servico">Tipo de serviço:</label>
+    <select id="servico">
+        <option value="">Selecione</option>
+        <option value="Manicure">Manicure</option>
+        <option value="Pedicure">Pedicure</option>
+        <option value="ManiePedi">Manicure e pedicure</option>
+        <option value="BanhoGel">Banho de Gel</option>
+        <option value="Blindagem">Blindagem</option>
+        <option value="SpaPes">Spa dos pés</option>
+    </select>
+    <br><br>
+
+    <div id="botao">
+    <button id="agenda" onclick="agendar()">Agendar</button>
+    </div>
+
+    </div>
+
+    <div id="agendamentos">
+
+    <h3>Agendamentos</h3>
+
+    <div id="listaAgendamentos"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    background-color: rgba(165, 63, 238, 0.795);
+}
+
+
+/*index*/
+
+#logo {
+    display: block;
+    width: 50%;
+    border-radius: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#servicos img{
+    display: block;
+    width: 50%;
+    border-radius: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#servicos img:hover {
+    transform: scale(1.05);
+}
+
+#servicos p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    padding: 10px;
+    text-align: center;
+}
+#container {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#container input:hover{
+    border: 2px solid rgb(189, 84, 152);
+    border-radius: 10px;
+}
+
+
+input, select {
+    font-width: 22px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(217, 162, 245);
+    width: 150px;
+    padding: 5px;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.658);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: none;
+    padding: 7px 15px;
+    font-size: 15px;
+}
+
+#botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#agenda {
+    padding: 10px;
+}
+
+#agenda:hover {
+    transform: scale(1.1);
+}
