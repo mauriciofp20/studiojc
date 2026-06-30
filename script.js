@@ -8,23 +8,32 @@ document.getElementById("data").min = hoje;
 let dadosSalvos = localStorage.getItem("agendamentos");
 
 if (dadosSalvos) {
+    
     agendamentos = JSON.parse(dadosSalvos);
+
+}
+
+    window.onload = function () {
+    mostrarAgendamentos(agendamentos);
+    };
+
+    function mostrarAgendamentos(lista) {
 
     let texto = "";
 
-    for (let i = 0; i < agendamentos.length; i++) {
-        texto += "Cliente: " + agendamentos[i].cliente + "<br>";
-        texto += "Data: " + agendamentos[i].data + "<br>";
-        texto += "Horário: " + agendamentos[i].horario + "<br>";
-        texto += "Serviço: " + agendamentos[i].servico + "<br>";
+    for (let i = 0; i < lista.length; i++) {
+
+        texto += "Cliente: " + lista[i].cliente + "<br>";
+        texto += "Data: " + lista[i].data + "<br>";
+        texto += "Horário: " + lista[i].horario + "<br>";
+        texto += "Serviço: " + lista[i].servico + "<br>";
         texto += "<hr>";
+
     }
 
-    window.onload = function () {
-        document.getElementById("listaAgendamentos").innerHTML = texto;
-    };
-}
+    document.getElementById("listaAgendamentos").innerHTML = texto;
 
+}
 
 function agendar() {
 
@@ -72,20 +81,52 @@ agendamentos.push(novoAgendamento);
 localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
 
 
-let texto = "";
-
-for (let i = 0; i < agendamentos.length; i++) {
-    texto += "Cliente: " + agendamentos[i].cliente + "<br>";
-    texto += "Data: " + agendamentos[i].data + "<br>";
-    texto += "Horário: " + agendamentos[i].horario + "<br>";
-    texto += "Serviço: " + agendamentos[i].servico + "<br>";
-    texto += "<hr>";
-}
-
-document.getElementById("listaAgendamentos").innerHTML = texto;
+mostrarAgendamentos(agendamentos);
 
 document.getElementById("cliente").value = "";
 document.getElementById("data").value = "";
 document.getElementById("horario").value = "";
 document.getElementById("servico").value = "";
 }
+
+function mostrarHoje() {
+    let hojeLista = [];
+
+    for (let i = 0; i < agendamentos.length; i++) {
+        
+        if (agendamentos[i].data === hoje) {
+
+        hojeLista.push(agendamentos[i]);
+
+        }
+    }
+
+    mostrarAgendamentos(hojeLista);
+
+}
+
+function mostrarProximos() {
+   let proxLista = [];
+
+   for (let i = 0; i < agendamentos.length; i++) {
+    if (agendamentos[i].data > hoje) {
+        proxLista.push(agendamentos[i]);
+    }
+   }
+   mostrarAgendamentos(proxLista);
+}
+
+
+
+function mostrarHistorico() {
+    let histLista = [];
+
+    for (let i = 0; i < agendamentos.length; i++) {
+        if (agendamentos[i].data < hoje) {
+            histLista.push(agendamentos[i]);
+        }
+    }
+    mostrarAgendamentos(histLista);
+}
+
+    

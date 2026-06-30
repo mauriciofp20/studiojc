@@ -65,19 +65,33 @@
     </select>
     <br><br>
 
-    <div id="botao">
     <button id="agenda" onclick="agendar()">Agendar</button>
-    </div>
 
     </div>
 
     <div id="agendamentos">
 
-    <h3>Agendamentos</h3>
+        <h3>Agendamentos</h3>
 
-    <div id="listaAgendamentos"></div>
+        <div id="filtros">
+
+            <button onclick="mostrarAgendamentos(agendamentos)">Todos</button>
+
+            <button onclick="mostrarHoje()">Hoje</button>
+
+            <button onclick="mostrarProximos()">Próximos</button>
+
+            <button onclick="mostrarHistorico()">Histórico</button>
+
+        </div>
+
+        <br>
+
+        <div id="listaAgendamentos"></div>
 
     </div>
+
+
 
     <script src="script.js"></script>
 </body>
